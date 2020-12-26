@@ -1,6 +1,9 @@
 if (turtle.inspect() ~= "minecraft:chest") then
 	error('missing chest in front')
 end
+if (turtle.inspectUp() ~= "minecraft:chest") then
+	error('missing chest in front')
+end
 
 while (true) do
 
