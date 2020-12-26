@@ -1,8 +1,10 @@
-if (turtle.inspect() ~= "minecraft:chest") then
+s,front_item = turtle.inspect()
+s,top_item = turtle.inspectUp()
+if (front_item.name ~= "minecraft:chest") then
 	error('missing chest in front')
 end
-if (turtle.inspectUp() ~= "minecraft:chest") then
-	error('missing chest in front')
+if (top_item.name ~= "minecraft:chest") then
+	error('missing chest on top')
 end
 
 while (true) do
