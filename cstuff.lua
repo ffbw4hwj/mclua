@@ -1,10 +1,7 @@
 if (turtle.inspect() ~= "minecraft:chest") then
-	print('missing chest in front')
-	exit()
+	error('missing chest in front')
 end
 
-
-	
 while (true) do
 
 	local slotnum = 1
