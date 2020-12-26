@@ -11,11 +11,12 @@ while (true) do
 
 	local slotnum = 1
 	while slotnum < 15 do
-		print('attempt to suck to slot ' .. slotnum)		
-		turtle.drop(slotnum);
+		print('clearing slot ' .. slotnum)
+		turtle.drop();
 		
 		-- grab stuff to 3x3 in inventory
 		if slotnum % 4 ~= 0 then
+			print('attempt to suck to slot ' .. slotnum)
 			turtle.select(slotnum)
 			while not turtle.suck() do
 				print('[!] front chest is empty, sleep 3 sec to try again')
