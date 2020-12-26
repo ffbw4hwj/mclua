@@ -28,7 +28,7 @@ while (true) do
 					print('front chest lacking full stack, sleep 3 sec to try again')
 					os.sleep(3)
 				end
-			end
+			until(full_stack)
 		end
 		slotnum = slotnum + 1
 	end
